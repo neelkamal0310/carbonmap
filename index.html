@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <title>Map</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .box {
+        display:  inline-block;
+        width:  25px;
+        height:  25px;
+        background-color:  black;
+        margin-right: .2em;
+    }
+    .legend {
+        background-color: white;
+        padding:  1em;
+        position:  fixed;
+        right:  1em;
+        bottom:  1em;
+    }
+    .legend-item {
+        display:  flex;
+        align-items: center;
+        margin:  .5em .5em .5em 0;
+    }
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+        .heading {
+            position:  fixed;
+            top:  1em;
+            right: 1em;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='heading'><h1>Carbon Emission Map - Great Britain</h1></div>
+    <div id="map"></div>
+    <div class="legend">
+        <h2>Legend</h2>
+        <div class="legend-item"><span class="box" style="background-color: #feebe2"></span>0-100</div>
+        <div class="legend-item"><span class="box" style="background-color: #fbb4b9"></span>100-299</div>
+        <div class="legend-item"><span class="box" style="background-color: #f768a1"></span>200-300</div>
+        <div class="legend-item"><span class="box" style="background-color: #c51b8a"></span>300-400</div>
+        <div class="legend-item"><span class="box" style="background-color: #7a0177"></span>500 and above</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
